@@ -20,7 +20,7 @@
                     <li>Price: ₱ ' . number_format($x->getPrice(), 2 ). '</li>
                     <li>Dose: ' . $x->getDose() . '</li>
                     <li>Type: ' . $x->getType() . '</li>
-                    <li>Exp Date: ' . $item->getExpirationDate() . '</li>
+                    <li>Exp Date: ' . $x->getExpirationDate() . '</li>
                     <li>SRP: ' . $x->computeSRP() . '</li>
                 </ul>
                 <hr>';
