@@ -1,5 +1,5 @@
 <?php
-    class Products(){
+    class Products{
         private $name;
         private $description;
         private $price;
@@ -14,17 +14,18 @@
         function setPrice($price){
             $this->price = $price;
         }
+        
         function getName(){
-            echo $this->name;
-        } 
+            return $this->name;
+        }
         function getDescription(){
-            echo $this->description;
+            return $this->description;
         }
         function getPrice(){
-            echo $this->price;
+            return $this->price;
         }
-        function computeSRP(){
-            ($this->price*1.5) + $this->srp = $this->srp;
+        function computeSRP() {
+            return $this->price * 1.5;
         }
     }
 

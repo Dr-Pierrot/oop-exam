@@ -15,17 +15,18 @@
         function setExpirationDate($expirationDate){
             $this->expirationDate = $expirationDate;
         }
+        
         function getDose(){
-            echo $this->dose;
+            return $this->dose;
         }
         function getType(){
-            echo $this->type;
+            return $this->type;
         }
         function getExpirationDate(){
-            echo $this->expirationDate;
+            return $this->expirationDate;
         }
-        function computeSRP(){
-            ($this->price * 2) + $this->srp = $this->srp;
+        function computeSRP() {
+            return $this->getPrice() * 2;
         }
     }
 
