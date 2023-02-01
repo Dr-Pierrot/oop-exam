@@ -24,7 +24,7 @@
             echo $this->price;
         }
         function computeSRP(){
-            echo ($this->price*1.5);
+            ($this->price*1.5) + $this->srp = $this->srp;
         }
     }
 
