@@ -6,22 +6,21 @@
     class Cart extends Medicine{
         private $cartItems = array();
     
-        function addToCart($item){
-            $this->cartItems[] = $item;
+        function addToCart($items){
+            $this->cartItems[] = $items;
         }
         function viewCart(){
-            $arrCartItems = $this->cartItems;
-            foreach ($arrCartItems as $key => $x){
+            foreach ($this->cartItems as $key => $x){
                 echo 
                 '
                 <ul>
-                    <li>Name: ' . $x->getName() . '</li>
-                    <li>Description: ' . $x->getDescription() . '</li>
-                    <li>Price: ₱ ' . number_format($x->getPrice(), 2 ). '</li>
-                    <li>Dose: ' . $x->getDose() . '</li>
-                    <li>Type: ' . $x->getType() . '</li>
-                    <li>Exp Date: ' . $x->getExpirationDate() . '</li>
-                    <li>SRP: ' . $x->computeSRP() . '</li>
+                    <li><b>Name:</b> ' . $x->getName() . '</li>
+                    <li><b>Description:</b> ' . $x->getDescription() . '</li>
+                    <li><b>Price:</b> ₱ ' . number_format($x->getPrice(), 2 ). '</li>
+                    <li><b>Dose:</b> ' . $x->getDose() . '</li>
+                    <li><b>Type:</b> ' . $x->getType() . '</li>
+                    <li><b>Exp Date:</b> ' . $x->getExpirationDate() . '</li>
+                    <li><b>SRP:</b> ₱ ' . number_format($x->computeSRP(),2) . '</li>
                 </ul>
                 <hr>';
             }
