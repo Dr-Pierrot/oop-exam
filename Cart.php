@@ -11,26 +11,25 @@
         }
         function viewCart(){
             $arrCartItems = $this->cartItems;
-            foreach ($arrCartItems as $key => $item){
+            foreach ($arrCartItems as $key => $x){
                 echo 
                 '
                 <ul>
-                    <li>Name: ' . $item->getName() . '</li>
-                    <li>Description: ' . $item->getDescription() . '</li>
-                    <li>Price: ₱ ' . number_format($item->getPrice(), 2 ). '</li>
-                    <li>Dose: ' . $item->getDose() . '</li>
-                    <li>Type: ' . $item->getType() . '</li>
+                    <li>Name: ' . $x->getName() . '</li>
+                    <li>Description: ' . $x->getDescription() . '</li>
+                    <li>Price: ₱ ' . number_format($x->getPrice(), 2 ). '</li>
+                    <li>Dose: ' . $x->getDose() . '</li>
+                    <li>Type: ' . $x->getType() . '</li>
                     <li>Exp Date: ' . $item->getExpirationDate() . '</li>
-                    <li>SRP: ' . $item->computeSRP() . '</li>
+                    <li>SRP: ' . $x->computeSRP() . '</li>
                 </ul>
                 <hr>';
             }
-
         }
         function computeTotal(){
             $total = 0;
-            foreach($this->cartItems as $key => $item){
-                $total += $item->computeSRP();
+            foreach($this->cartItems as $key => $x){
+                $total += $x->computeSRP();
             }
             echo '<b>Total Cart Amount: </b> ₱ ' . number_format($total,2);
         }
